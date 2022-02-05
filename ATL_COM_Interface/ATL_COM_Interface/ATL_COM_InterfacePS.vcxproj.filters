@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{f07eadaf-3f71-4c7c-b835-6a0d5140e966}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Созданные файлы">
+      <UniqueIdentifier>{c712cdd3-ec7d-4924-b0a2-0aa0b6622edf}</UniqueIdentifier>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ATL_COM_Interfaceps.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ATL_COM_Interface_i.c">
+      <Filter>Созданные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="ATL_COM_Interface_p.c">
+      <Filter>Созданные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="dlldata.c">
+      <Filter>Созданные файлы</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

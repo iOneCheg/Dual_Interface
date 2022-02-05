@@ -1,0 +1,39 @@
+// ATL_COM_Interface.idl: источник IDL для ATL_COM_Interface
+//
+
+// Этот файл будет обработан средством MIDL для
+// создания библиотеки типов (ATL_COM_Interface.tlb) и кода маршалирования.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(B5CA1F64-F36D-4128-9E22-D8B52CECAA6B),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IDynamicArray : IDispatch{
+	[id(1)] HRESULT Add(DOUBLE object);
+	[id(2)] HRESULT Remove(DOUBLE object);
+	[propget, id(3)] HRESULT Count([out, retval] USHORT* pVal);
+	[propget, id(4)] HRESULT meanValue([out, retval] DOUBLE* pVal);
+	[id(5)] HRESULT GetData([out, retval] SAFEARRAY(double)* arr);
+};
+[
+	uuid(A8A6D796-7774-4FFB-9BEA-BFEF937E740B),
+	version(1.0),
+]
+library ATL_COM_InterfaceLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(4D3B286B-80FC-4CA4-84EF-7C6BEF1DF581)		
+	]
+	coclass DynamicArray
+	{
+		[default] interface IDynamicArray;
+	};
+};
+
